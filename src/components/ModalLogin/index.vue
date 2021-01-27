@@ -67,7 +67,7 @@
 <script>
 import { reactive } from 'vue'
 import { useField } from 'vee-validate'
-import { validateEmptyAndLength6, validateEmptyAndEmail } from '../../utils/validators'
+import { validateEmptyAndLength3, validateEmptyAndEmail } from '../../utils/validators'
 import { useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
 import Icon from '../Icon'
@@ -88,7 +88,7 @@ export default {
     const {
       value: passwordValue,
       errorMessage: passwordErrorMessage
-    } = useField('password', validateEmptyAndLength6)
+    } = useField('password', validateEmptyAndLength3)
 
     const state = reactive({
       hasError: false,
